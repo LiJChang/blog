@@ -2,13 +2,13 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>文章列表: 2022/9 - Li&#39;s Blog</title>
+<title>標籤: shell - Li&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
 
 
-<link href="/blog/en/archives/2022/09/index.html" rel="alternate" hreflang="en" />
+<link href="/blog/en/tags/shell/index.html" rel="alternate" hreflang="en" />
     
 
 
@@ -22,7 +22,7 @@
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="Li&#39;s Blog">
-<meta property="og:url" content="https://lijchang.github.io/blog/archives/2022/09/index.html">
+<meta property="og:url" content="https://lijchang.github.io/blog/tags/shell/index.html">
 <meta property="og:site_name" content="Li&#39;s Blog">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:author" content="Li CHang">
@@ -121,34 +121,49 @@
     </div>
 </nav>
 
-    <section class="section">
+    <section class="section section-heading">
+    <div class="container">
+        <div class="content">
+            <h5>#shell</h5>
+        </div>
+    </div>
+</section>
+<section class="section">
     <div class="container">
     
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/blog/2022/09/10/move-folder-content/" itemprop="url">Move folder up a level in shell</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2022-09-10T12:17:18.000Z" itemprop="datePublished">2022年9月10日</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/blog/categories/software/">software</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <div class="archive content">
-            <h4 class="title is-4" id="2022">2022</h4>
-            <div class="articles">
-            
-                <div class="article content flexbox">
-                    <time class="is-text-small monospace mr1" datetime="2022-09-18T15:09:11.626Z" itemprop="datePublished">
-                        09月18日</time>
-                    <h6 class="title is-6"><a href="/blog/2022/09/18/hello-world/">Hello World</a></h6>
-                </div>
-            
-                <div class="article content flexbox">
-                    <time class="is-text-small monospace mr1" datetime="2022-09-18T15:09:11.626Z" itemprop="datePublished">
-                        09月18日</time>
-                    <h6 class="title is-6"><a href="/blog/2022/09/18/index/"></a></h6>
-                </div>
-            
-                <div class="article content flexbox">
-                    <time class="is-text-small monospace mr1" datetime="2022-09-10T12:17:18.000Z" itemprop="datePublished">
-                        09月10日</time>
-                    <h6 class="title is-6"><a href="/blog/2022/09/10/move-folder-content/">Move folder up a level in shell</a></h6>
-                </div>
-            
-            </div>
-        </div>
+        <html><head></head><body><h2 id="情境描述"><a href="#情境描述" class="headerlink" title="情境描述"></a>情境描述</h2><figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/folder/tmp -&gt; /folder/</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="command"><a href="#command" class="headerlink" title="command"></a>command</h2><figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="hljs-built_in">mv</span> /folder/tmp/* /foler/tmp/.* /folder &amp;&amp; <span class="hljs-built_in">rmdir</span> /folder/tmp</span><br></pre></td></tr></tbody></table></figure>
+</body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
     
     
     </div>

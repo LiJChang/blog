@@ -2,13 +2,13 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>文章列表: 2022/9 - Li&#39;s Blog</title>
+<title>標籤: python - Li&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
 
 
-<link href="/blog/en/archives/2022/09/index.html" rel="alternate" hreflang="en" />
+<link href="/blog/en/tags/python/index.html" rel="alternate" hreflang="en" />
     
 
 
@@ -22,7 +22,7 @@
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="Li&#39;s Blog">
-<meta property="og:url" content="https://lijchang.github.io/blog/archives/2022/09/index.html">
+<meta property="og:url" content="https://lijchang.github.io/blog/tags/python/index.html">
 <meta property="og:site_name" content="Li&#39;s Blog">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:author" content="Li CHang">
@@ -121,34 +121,50 @@
     </div>
 </nav>
 
-    <section class="section">
+    <section class="section section-heading">
+    <div class="container">
+        <div class="content">
+            <h5>#python</h5>
+        </div>
+    </div>
+</section>
+<section class="section">
     <div class="container">
     
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/blog/2022/08/05/2022-08-05-jinja2-render/" itemprop="url">Jinja2的妙用</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2022-08-05T00:00:00.000Z" itemprop="datePublished">2022年8月5日</time>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <div class="archive content">
-            <h4 class="title is-4" id="2022">2022</h4>
-            <div class="articles">
-            
-                <div class="article content flexbox">
-                    <time class="is-text-small monospace mr1" datetime="2022-09-18T15:09:11.626Z" itemprop="datePublished">
-                        09月18日</time>
-                    <h6 class="title is-6"><a href="/blog/2022/09/18/hello-world/">Hello World</a></h6>
-                </div>
-            
-                <div class="article content flexbox">
-                    <time class="is-text-small monospace mr1" datetime="2022-09-18T15:09:11.626Z" itemprop="datePublished">
-                        09月18日</time>
-                    <h6 class="title is-6"><a href="/blog/2022/09/18/index/"></a></h6>
-                </div>
-            
-                <div class="article content flexbox">
-                    <time class="is-text-small monospace mr1" datetime="2022-09-10T12:17:18.000Z" itemprop="datePublished">
-                        09月10日</time>
-                    <h6 class="title is-6"><a href="/blog/2022/09/10/move-folder-content/">Move folder up a level in shell</a></h6>
-                </div>
-            
-            </div>
-        </div>
+        <html><head></head><body><p>python programmer通常是在使用<code>flask</code>的時候接觸到jinja2的。不過除了在產生動態網頁會湧到模板語言。<br>在其他情境下模板語言也是非常有幫助的。這篇文章就來介紹我自己使用jinja2來產生machine learning報表來快速分享給組員。</p>
+<h2 id="需要模板引擎的緣由"><a href="#需要模板引擎的緣由" class="headerlink" title="需要模板引擎的緣由"></a>需要模板引擎的緣由</h2><p>如果我們要快速地使用python來寫出html報表<br>你可能會遇到這樣的code</p>
+<figure class="highlight python hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">'file.html'</span>, <span class="hljs-string">'w'</span>) <span class="hljs-keyword">as</span> f:</span><br><span class="line">    f.write(<span class="hljs-string">'html content'</span>)</span><br></pre></td></tr></tbody></table></figure>
+<p>只要f.write一多，code很快就會變得雜亂不堪。<br>這時候要改code的人一看壹定是大翻白眼。</p>
+<h2 id="解決方案"><a href="#解決方案" class="headerlink" title="解決方案"></a>解決方案</h2><p>上述做法顯然不好，view跟業務邏輯混在一起，顯然違反了<br>Seperation of concern(SoC)原則。<br>目標：</p>
+<ol>
+<li>能夠專心寫view</li>
+<li>講view跟業務邏輯分開。<br>jinja2樣版引擎就非常適合這樣的需求。</li>
+</ol>
+<h2 id="第一步-寫模板-Template"><a href="#第一步-寫模板-Template" class="headerlink" title="第一步: 寫模板(Template)"></a>第一步: 寫模板(Template)</h2><h2 id="第二步-注入資料"><a href="#第二步-注入資料" class="headerlink" title="第二步: 注入資料"></a>第二步: 注入資料</h2><h2 id="第三步-產生文件"><a href="#第三步-產生文件" class="headerlink" title="第三步: 產生文件"></a>第三步: 產生文件</h2></body></html>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
     
     
     </div>

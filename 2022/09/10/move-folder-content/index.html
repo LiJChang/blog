@@ -1,222 +1,425 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>draft | Li&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="情境描述&#x2F;folder&#x2F;tmp -&gt; &#x2F;folder&#x2F; command&#96;mv &#x2F;folder&#x2F;tmp&#x2F;* &#x2F;foler&#x2F;tmp&#x2F;.* &#x2F;folder &amp;&amp; rmdir &#x2F;folder&#x2F;tmp">
+    <meta charset="utf-8">
+<title>Move folder up a level in shell - Li&#39;s Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<link href="/blog/en/2022/09/10/move-folder-content/" rel="alternate" hreflang="en" />
+    
+
+
+<meta name="description" content="">
+
+
+
+
+
+
+
+    <meta name="description" content="情境描述1&#x2F;folder&#x2F;tmp -&gt; &#x2F;folder&#x2F;  command1$ mv &#x2F;folder&#x2F;tmp&#x2F;* &#x2F;foler&#x2F;tmp&#x2F;.* &#x2F;folder &amp;&amp; rmdir &#x2F;folder&#x2F;tmp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="draft">
+<meta property="og:title" content="Move folder up a level in shell">
 <meta property="og:url" content="https://lijchang.github.io/blog/2022/09/10/move-folder-content/index.html">
 <meta property="og:site_name" content="Li&#39;s Blog">
-<meta property="og:description" content="情境描述&#x2F;folder&#x2F;tmp -&gt; &#x2F;folder&#x2F; command&#96;mv &#x2F;folder&#x2F;tmp&#x2F;* &#x2F;foler&#x2F;tmp&#x2F;.* &#x2F;folder &amp;&amp; rmdir &#x2F;folder&#x2F;tmp">
-<meta property="og:locale" content="en_US">
+<meta property="og:description" content="情境描述1&#x2F;folder&#x2F;tmp -&gt; &#x2F;folder&#x2F;  command1$ mv &#x2F;folder&#x2F;tmp&#x2F;* &#x2F;foler&#x2F;tmp&#x2F;.* &#x2F;folder &amp;&amp; rmdir &#x2F;folder&#x2F;tmp">
+<meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2022-09-10T12:17:18.000Z">
-<meta property="article:modified_time" content="2022-09-10T04:44:43.286Z">
+<meta property="article:modified_time" content="2022-09-18T15:09:11.626Z">
 <meta property="article:author" content="Li CHang">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/blog/atom.xml" title="Li's Blog" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/blog/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+<meta property="article:tag" content="shell">
+<meta name="twitter:card" content="summary_large_image">
 
-  
-  
+
+
+
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+
 <link rel="stylesheet" href="/blog/css/style.css">
 
-  
-    
-<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.min.css">
 
-  
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+
 <meta name="generator" content="Hexo 6.3.0"></head>
-
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/blog/" id="logo">Li&#39;s Blog</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/blog/">
+                
+                    
+                    <img src="/blog/logo.png" alt="" height="28">
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
         
-          <a class="main-nav-link" href="/blog/">Home</a>
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/blog/archives">文章列表</a>
+            
+            <a class="navbar-item "
+               href="/blog/categories">文章分類</a>
+            
+            <a class="navbar-item "
+               href="/blog/about">關於</a>
+            
+        </div>
         
-          <a class="main-nav-link" href="/blog/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://lijchang.github.io/blog"></form>
-      </div>
-    </div>
-  </div>
-</header>
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="搜尋" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" target="_blank" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+            
+                <a class="navbar-item" href="/en">English</a>
+            
+            
 
-      <div class="outer">
-        <section id="main"><article id="post-move-folder-content" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/blog/2022/09/10/move-folder-content/" class="article-date">
-  <time class="dt-published" datetime="2022-09-10T12:17:18.000Z" itemprop="datePublished">2022-09-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      draft
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="情境描述"><a href="#情境描述" class="headerlink" title="情境描述"></a>情境描述</h2><p>&#x2F;folder&#x2F;tmp -&gt; &#x2F;folder&#x2F;</p>
-<h2 id="command"><a href="#command" class="headerlink" title="command"></a>command</h2><p>&#96;mv &#x2F;folder&#x2F;tmp&#x2F;* &#x2F;foler&#x2F;tmp&#x2F;.* &#x2F;folder &amp;&amp; rmdir &#x2F;folder&#x2F;tmp</p>
-
-      
+        </div>
     </div>
-    <footer class="article-footer">
-      <a data-url="https://lijchang.github.io/blog/2022/09/10/move-folder-content/" data-id="cl7vfb6a100049vosfpoh4p4t" data-title="draft" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/blog/2022/09/10/2022-08-05-jinja2-render/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
-    </a>
-  
 </nav>
 
-  
+    <section class="section">
+    <div class="container">
+      <div data-nosnippet style="margin-bottom: 1rem; padding: 12px 24px; border-radius: 12px; background:#ffe4c4; display: none;">
+        我最近正好奇著大家讀完我的技術文章後的感想，有空的話可以幫我填一下：<a href="https://forms.gle/QuTY9yvKK3KRiGDj6" target="_blank">表單連結</a>
+      </div>
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Move folder up a level in shell
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2022-09-10T12:17:18.000Z" itemprop="datePublished">2022年9月10日</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/blog/categories/software/">software</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><h2 id="情境描述"><a href="#情境描述" class="headerlink" title="情境描述"></a>情境描述</h2><figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/folder/tmp -&gt; /folder/</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="command"><a href="#command" class="headerlink" title="command"></a>command</h2><figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="hljs-built_in">mv</span> /folder/tmp/* /foler/tmp/.* /folder &amp;&amp; <span class="hljs-built_in">rmdir</span> /folder/tmp</span><br></pre></td></tr></tbody></table></figure>
+</body></html>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/blog/tags/shell/">#shell</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/blog/2022/09/18/index/"></a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/blog/2022/08/15/2022-08-05-swap-variable-in-python/">Tuple Swap in Python</a>
+            
+        </span>
+    </div>
+    
 </article>
 
 
+
+
+    </div>
 </section>
-        
-          <aside id="sidebar">
-  
-    
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2022 Li CHang&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
 
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/09/">September 2022</a></li></ul>
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-minos">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+<div class="column is-narrow has-text-centered">
+    <div class="dropdown is-up is-right is-hoverable" style="margin-top: -0.2em;">
+        <div class="dropdown-trigger">
+            <button class="button is-small" aria-haspopup="true" aria-controls="dropdown-menu7">
+                <span class="icon">
+                    <i class="fas fa-globe"></i>
+                </span>
+                <span>繁體中文</span>
+                <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+            </button>
+        </div>
+        <div class="dropdown-menu has-text-left" role="menu" style="top:100%">
+            <div class="dropdown-content">
+            <!-- NOTE: 永遠回到首頁 -->
+            
+                <a href="/" class="dropdown-item">
+                    繁體中文
+                </a>
+            
+                <a href="/en" class="dropdown-item">
+                    English
+                </a>
+            
+            </div>
+        </div>
     </div>
-  </div>
+</div>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/blog/2022/09/10/move-folder-content/">draft</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2022/09/10/2022-08-05-jinja2-render/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2022/09/10/2022-08-05-swap-variable-in-python/">測試文</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2022/09/10/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/blog/2022/09/10/index/">(no title)</a>
-          </li>
-        
-      </ul>
+        </div>
     </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 Li CHang<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
 </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/blog/" class="mobile-nav-link">Home</a>
-  
-    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("zh-CN");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+</script>
+
+    
+    
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
     
 
-
-<script src="/blog/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/blog/fancybox/jquery.fancybox.min.js"></script>
-
+    
 
 
 
 <script src="/blog/js/script.js"></script>
 
 
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="站內搜尋" />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '頁面',
+                CATEGORIES: '分類',
+                TAGS: '標籤',
+                UNTITLED: '(無標題)',
+            },
+            CONTENT_URL: '/blog/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
 
+<script src="/blog/js/insight.js"></script>
 
-
-  </div>
+    
 </body>
 </html>

@@ -1,12 +1,15 @@
 ---
 layout: post
-title:  "測試文"
+title:  "Tuple Swap in Python"
+date: 2022-08-15
 ---
 
-# How `a,b=b,a` in python works? a.k.a Tuple swap
+![ny crossing](https://source.unsplash.com/eySzBaaIHAw/w=300)
+
+## How `a,b=b,a` in python works? a.k.a Tuple swap
 
 ## 前言
-這是一篇測試文章，測試在github pages上使用內建Jekyll build pipeline
+紀錄python `a,b = b,a` 這個語法的意思
 
 ## 此篇的前言
 
